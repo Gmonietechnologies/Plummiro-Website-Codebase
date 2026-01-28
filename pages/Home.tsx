@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             className="absolute min-w-full min-h-full w-auto h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover opacity-40 md:opacity-50"
           >
             <source 
-              src="https://player.vimeo.com/external/494252666.hd.mp4?s=2f5c786729007c08e5033c46b5d9095642d991b1&profile_id=175&oauth2_token_id=57447761" 
+              src="./assets/Plummiroherosectionimage.mp4" 
               type="video/mp4" 
             />
           </video>
@@ -42,9 +42,9 @@ const Home: React.FC = () => {
         
         <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
           <div className="max-w-4xl animate-fade-in-up mt-12 md:mt-0">
-            <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 mb-6 md:mb-8">
+            <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 mb-6 md:mb-8 mt-20">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              <span className="text-primary text-[10px] md:text-xs font-black uppercase tracking-widest">Engineering Excellence</span>
+              <span className="text-primary text-[10px] md:text-xs font-black uppercase tracking-widest ">Engineering Excellence</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[1.1] md:leading-[0.9] mb-6 md:mb-8">
               UNLOCKING <br className="hidden sm:block" />
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
             <p className="text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-2xl font-medium">
               Plurimmo Limited is a titan of civil engineering, strategic logistics and marine services, unlocking the true economic potential of West Africa.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 ">
               <Link to="/services" className="cta-button bg-primary text-white shadow-[0_20px_40px_-10px_rgba(155,103,204,0.5)] w-full sm:w-auto">
                 OUR SERVICES <ArrowRight className="ml-2" />
               </Link>
@@ -65,22 +65,6 @@ const Home: React.FC = () => {
         </div>
         
         {/* Floating Stats Bar - Optimized for Mobile (Vertical/Horizontal Grid) */}
-        <div className="absolute bottom-0 left-0 w-full bg-white/5 backdrop-blur-xl border-t border-white/10 z-20">
-           <div className="container mx-auto px-4 md:px-12 py-6 md:py-8 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-center text-white">
-              <div className="flex flex-col md:flex-row items-start md:items-center space-y-1 md:space-y-0 md:space-x-4">
-                 <span className="text-2xl md:text-4xl font-black text-primary">N46B</span>
-                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400">Coastal Road <br className="hidden md:block"/> Logistics</span>
-              </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center space-y-1 md:space-y-0 md:space-x-4 border-l border-white/10 pl-6 md:pl-0 md:border-l-0">
-                 <span className="text-2xl md:text-4xl font-black text-primary">$150M</span>
-                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400">Active Joint <br className="hidden md:block"/> Ventures</span>
-              </div>
-              <div className="hidden lg:flex items-center space-x-4">
-                 <span className="text-4xl font-black text-primary">30+</span>
-                 <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Years of Leaders <br/> Experience</span>
-              </div>
-           </div>
-        </div>
       </section>
 
       {/* About Us Preview */}

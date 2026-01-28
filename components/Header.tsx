@@ -4,6 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
+import PlurimmoLogoWhite from '../assets/PlurimmoLogoWhite.png';
+
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +29,7 @@ const Header: React.FC = () => {
   // LOGO LOGIC: 
   // Home gets White Logo
   // Subpages (About, Services, Contact) get Colored Logo
-  const logoSrc = isHome ? "Plurimmo Logo (white).png" : "Plurimmo Logo.png";
+  const logoSrc = isHome ? "PlurimmoLogoWhite.png" : "Plurimmo Logo.png";
 
   // HEADER STYLING LOGIC for "Perfect Contrast":
   // On Home: Dark background to pop the White logo.
@@ -51,7 +53,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
           <img 
-            src={logoSrc} 
+            src={PlurimmoLogoWhite} 
             alt="Plurimmo Limited" 
             className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
           />

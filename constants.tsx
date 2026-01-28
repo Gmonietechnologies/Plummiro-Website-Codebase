@@ -93,16 +93,16 @@ export const PROJECTS: Project[] = [
   {
     title: 'Lagos-Calabar Coastal Road',
     category: 'Haulage & Logistics (N46b)',
-    image: 'https://picsum.photos/id/122/600/400',
+    image: '/assets/LagosCalabarCoastalRoad.jpeg',
   },
   {
     title: 'Joint Venture Expansion',
     category: 'Infrastructure ($90m with 2iUK)',
-    image: 'https://picsum.photos/id/123/600/400',
+    image: '/assets/Joint Venture Expansion.jpeg',
   },
   {
     title: 'Marine Scrapping Project',
     category: 'Environmental Services',
-    image: 'https://picsum.photos/id/124/600/400',
+    image: '/assets/LagosCalabarCoastalRoad.jpeg',
   },
 ];
