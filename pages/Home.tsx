@@ -274,7 +274,7 @@ const Home: React.FC = () => {
               <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4 md:mb-6">Support</h4>
               <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter mb-6 md:mb-8">Got Questions? <br className="hidden md:block"/> We Have Answers.</h2>
               <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-10">
-                Transparent communication is at the core of our business. If you don't find what you're looking for, our consultants are ready to help.
+                Transparent communicationn is at the core of our business. If you don't find what you're looking for, our consultants are ready to help.
               </p>
               <div className="bg-dark p-6 md:p-8 rounded-2xl md:rounded-3xl text-white inline-block w-full sm:w-auto">
                  <p className="font-bold mb-2 text-sm md:text-base">Call for urgent inquiries:</p>
