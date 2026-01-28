@@ -1,0 +1,7 @@
+{
+  "name": "Plurimmo  Corporate Website",
+  "description": "A high-performance corporate website for Plurimmo Limited, showcasing infrastructure, logistics, and engineering excellence.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
