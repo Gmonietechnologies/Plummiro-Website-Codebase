@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
-import PlurimmoLogoWhite from '../assets/PlurimmoLogoWhite.png';
+
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +25,11 @@ const Header: React.FC = () => {
   }, [location]);
 
   const isHome = location.pathname === '/';
-  
+
   // LOGO LOGIC: 
   // Home gets White Logo
   // Subpages (About, Services, Contact) get Colored Logo
-  const logoSrc = isHome ? "PlurimmoLogoWhite.png" : "Plurimmo Logo.png";
+  const logoSrc = isHome ? "/assets/PlurimmoLogoWhite.png" : "/assets/PlurimmoLogo.png";
 
   // HEADER STYLING LOGIC for "Perfect Contrast":
   // On Home: Dark background to pop the White logo.
@@ -52,18 +52,18 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${headerClasses}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
-          <img 
-            src={PlurimmoLogoWhite} 
-            alt="Plurimmo Limited" 
-            className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+          <img
+            src={logoSrc}
+            alt="Plurimmo Limited"
+            className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-10">
           {NAV_ITEMS.map((item) => (
-            <Link 
-              key={item.path} 
+            <Link
+              key={item.path}
               to={item.path}
               className={linkClasses(item.path)}
             >
@@ -71,8 +71,8 @@ const Header: React.FC = () => {
               <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
             </Link>
           ))}
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className={`cta-button ${isHome ? 'bg-primary text-white hover:bg-white hover:text-dark' : 'bg-primary text-white hover:bg-dark'} shadow-xl`}
           >
             REQUEST A QUOTE
@@ -93,10 +93,10 @@ const Header: React.FC = () => {
           </button>
         </div>
         <div className="flex flex-col items-center space-y-10">
-          <img src="Plurimmo Logo (white).png" alt="Plurimmo" className="h-12 w-auto mb-8" />
+          <img src="/assets/PlurimmoLogoWhite.png" alt="Plurimmo" className="h-12 w-auto mb-8" />
           {NAV_ITEMS.map((item, i) => (
-            <Link 
-              key={item.path} 
+            <Link
+              key={item.path}
               to={item.path}
               className={`text-3xl font-black uppercase tracking-tighter ${location.pathname === item.path ? 'text-primary' : 'text-white'}`}
               style={{ transitionDelay: `${i * 100}ms` }}
@@ -104,8 +104,8 @@ const Header: React.FC = () => {
               {item.label}
             </Link>
           ))}
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="cta-button bg-primary text-white w-full max-w-xs shadow-2xl"
           >
             GET A QUOTE <ArrowRight className="ml-2" />

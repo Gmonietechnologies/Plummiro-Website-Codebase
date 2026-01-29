@@ -23,10 +23,10 @@ const Footer: React.FC = () => {
           {/* Brand Info */}
           <div>
             <div className="flex items-center mb-8">
-              <img 
-                src="Plurimmo Logo (white).png" 
-                alt="Plurimmo Limited" 
-                className="h-10 w-auto object-contain" 
+              <img
+                src="/assets/PlurimmoLogoWhite.png"
+                alt="Plurimmo Limited"
+                className="h-10 w-auto object-contain"
               />
             </div>
             <p className="text-gray-400 mb-8 leading-relaxed">
@@ -34,9 +34,9 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               {[Facebook, Linkedin, Instagram].map((Icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
+                <a
+                  key={i}
+                  href="#"
                   onClick={handleSocialClick}
                   className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-primary hover:text-dark transition-all"
                 >
