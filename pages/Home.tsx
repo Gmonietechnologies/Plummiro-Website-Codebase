@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <div className="lg:w-1/2 relative w-full">
               <div className="relative z-10 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-secondary">
                 <img
-                  src="https://images.unsplash.com/photo-1591768793355-74d7c5040179?auto=format&fit=crop&q=80"
+                  src="/assets/LagosCalabarCoastalRoad.jpeg"
                   alt="Sinotruk 30-ton tipper truck"
                   className="w-full h-[300px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-700"
                 />
