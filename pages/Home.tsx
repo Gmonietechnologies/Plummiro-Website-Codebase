@@ -1,13 +1,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldCheck, 
-  TrendingUp, 
-  Globe, 
-  Construction, 
+import {
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  TrendingUp,
+  Globe,
+  Construction,
   Truck,
   Wrench,
   Anchor,
@@ -23,23 +23,23 @@ const Home: React.FC = () => {
       <section className="relative h-[90vh] md:h-screen flex items-center overflow-hidden bg-dark">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline 
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="absolute min-w-full min-h-full w-auto h-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover opacity-40 md:opacity-50"
           >
-            <source 
-              src="./assets/Plummiroherosectionimage.mp4" 
-              type="video/mp4" 
+            <source
+              src="/assets/Plummiroherosectionimage.mp4"
+              type="video/mp4"
             />
           </video>
         </div>
 
         {/* Text Readability Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-transparent"></div>
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
           <div className="max-w-4xl animate-fade-in-up mt-12 md:mt-0">
             <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 mb-6 md:mb-8 mt-20">
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Floating Stats Bar - Optimized for Mobile (Vertical/Horizontal Grid) */}
       </section>
 
@@ -73,10 +73,10 @@ const Home: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-12 md:gap-24 items-center">
             <div className="lg:w-1/2 relative w-full">
               <div className="relative z-10 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl bg-secondary">
-                <img 
-                  src="https://images.unsplash.com/photo-1591768793355-74d7c5040179?auto=format&fit=crop&q=80" 
-                  alt="Sinotruk 30-ton tipper truck" 
-                  className="w-full h-[300px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-700" 
+                <img
+                  src="https://images.unsplash.com/photo-1591768793355-74d7c5040179?auto=format&fit=crop&q=80"
+                  alt="Sinotruk 30-ton tipper truck"
+                  className="w-full h-[300px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -top-6 -left-6 md:-top-12 md:-left-12 w-32 h-32 md:w-64 md:h-64 bg-secondary rounded-full -z-10 opacity-50"></div>
@@ -103,8 +103,8 @@ const Home: React.FC = () => {
                 ].map((item) => (
                   <div key={item.title} className="flex items-start space-x-3 md:space-x-4">
                     <div className="bg-primary/10 p-2 rounded-lg">
-                       {/* Fix: replaced md:size with Tailwind classes */}
-                       <CheckCircle2 className="text-primary w-5 h-5 md:w-6 md:h-6" />
+                      {/* Fix: replaced md:size with Tailwind classes */}
+                      <CheckCircle2 className="text-primary w-5 h-5 md:w-6 md:h-6" />
                     </div>
                     <div>
                       <h5 className="font-black text-dark text-xs md:text-sm uppercase">{item.title}</h5>
@@ -127,9 +127,9 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
             <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Strategic Value</h4>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter">Why Global Leaders <br className="hidden md:block"/> Trust Plurimmo.</h2>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter">Why Global Leaders <br className="hidden md:block" /> Trust Plurimmo.</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             <div className="group bg-white/5 border border-white/10 p-8 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem] hover:bg-primary transition-all duration-500 cursor-default">
               {/* Fix: replaced md:size with Tailwind classes */}
@@ -170,44 +170,44 @@ const Home: React.FC = () => {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-dark tracking-tighter">Comprehensive Solutions.</h2>
             </div>
             <Link to="/services" className="text-primary font-black uppercase tracking-widest text-[10px] md:text-sm flex items-center group">
-               EXPLORE ALL <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
+              EXPLORE ALL <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { 
-                icon: Construction, 
-                title: 'Civil Engineering', 
+              {
+                icon: Construction,
+                title: 'Civil Engineering',
                 desc: 'We offer roads, bridges and infrastructure development in West Africa.',
-                color: 'bg-blue-500' 
+                color: 'bg-blue-500'
               },
-              { 
-                icon: Truck, 
-                title: 'Logistics & Haulage', 
+              {
+                icon: Truck,
+                title: 'Logistics & Haulage',
                 desc: 'We handle strategic transportation across West Africa with ease.',
-                color: 'bg-primary' 
+                color: 'bg-primary'
               },
-              { 
-                icon: Wrench, 
-                title: 'Equipment Rental', 
+              {
+                icon: Wrench,
+                title: 'Equipment Rental',
                 desc: 'We have modern fleet of trucks and heavy construction machinery for rent.',
-                color: 'bg-dark' 
+                color: 'bg-dark'
               },
-              { 
-                icon: Anchor, 
-                title: 'Vessel Scrapping', 
+              {
+                icon: Anchor,
+                title: 'Vessel Scrapping',
                 desc: 'We offer vessel scrapping and recycling of decommissioned vessels in Nigeria.',
-                color: 'bg-purple-400' 
+                color: 'bg-purple-400'
               },
             ].map((s, i) => (
               <div key={i} className="group relative p-8 md:p-10 rounded-2xl md:rounded-3xl border border-gray-100 hover:border-primary transition-all duration-500 hover:shadow-xl text-center flex flex-col items-center">
-                 <div className={`w-16 h-16 md:w-20 md:h-20 ${s.color} rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-lg group-hover:rotate-6 transition-transform`}>
-                    {/* Fix: replaced md:size with Tailwind classes */}
-                    <s.icon className="text-white w-7 h-7 md:w-9 md:h-9" />
-                 </div>
-                 <h3 className="text-lg md:text-xl font-black text-dark mb-3 md:mb-4">{s.title}</h3>
-                 <p className="text-gray-500 text-xs md:text-sm font-medium leading-relaxed">{s.desc}</p>
+                <div className={`w-16 h-16 md:w-20 md:h-20 ${s.color} rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-lg group-hover:rotate-6 transition-transform`}>
+                  {/* Fix: replaced md:size with Tailwind classes */}
+                  <s.icon className="text-white w-7 h-7 md:w-9 md:h-9" />
+                </div>
+                <h3 className="text-lg md:text-xl font-black text-dark mb-3 md:mb-4">{s.title}</h3>
+                <p className="text-gray-500 text-xs md:text-sm font-medium leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -217,52 +217,52 @@ const Home: React.FC = () => {
       {/* Our Projects */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-6 lg:px-12">
-           <div className="text-center mb-12 md:mb-16">
-              <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Portfolio</h4>
-              <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter">Our Landmark Projects.</h2>
-           </div>
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-              {PROJECTS.map((project, idx) => (
-                <div key={idx} className="group relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden aspect-[4/5] shadow-xl bg-dark">
-                   <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
-                   />
-                   <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 md:p-10">
-                      <p className="text-primary font-black uppercase text-[10px] tracking-widest mb-2">{project.category}</p>
-                      <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{project.title}</h3>
-                   </div>
+          <div className="text-center mb-12 md:mb-16">
+            <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Portfolio</h4>
+            <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter">Our Landmark Projects.</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {PROJECTS.map((project, idx) => (
+              <div key={idx} className="group relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden aspect-[4/5] shadow-xl bg-dark">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 md:p-10">
+                  <p className="text-primary font-black uppercase text-[10px] tracking-widest mb-2">{project.category}</p>
+                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{project.title}</h3>
                 </div>
-              ))}
-           </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="py-20 md:py-32 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 p-10 md:p-20 opacity-5">
-           {/* Fix: replaced md:size with Tailwind classes */}
-           <Quote className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]" />
+          {/* Fix: replaced md:size with Tailwind classes */}
+          <Quote className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]" />
         </div>
         <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
-           <div className="max-w-4xl mx-auto">
-              <div className="flex justify-center mb-8 md:mb-10">
-                 {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="text-primary fill-primary w-5 h-5 md:w-6 md:h-6" />
-                 ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-center mb-8 md:mb-10">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="text-primary fill-primary w-5 h-5 md:w-6 md:h-6" />
+              ))}
+            </div>
+            <div className="text-center italic text-xl md:text-4xl font-black text-dark tracking-tight leading-snug mb-10 md:mb-12">
+              "Plurimmo's capacity to deliver logistics services to the Lagos-Calabar coastal road project has been transformative. Their fleet reliability and strategic coordination are unmatched in the West African market."
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-accent mb-4 border-2 border-primary overflow-hidden">
+                <img src="https://picsum.photos/id/177/100/100" alt="Client" />
               </div>
-              <div className="text-center italic text-xl md:text-4xl font-black text-dark tracking-tight leading-snug mb-10 md:mb-12">
-                "Plurimmo's capacity to deliver logistics services to the Lagos-Calabar coastal road project has been transformative. Their fleet reliability and strategic coordination are unmatched in the West African market."
-              </div>
-              <div className="flex flex-col items-center">
-                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-accent mb-4 border-2 border-primary overflow-hidden">
-                    <img src="https://picsum.photos/id/177/100/100" alt="Client" />
-                 </div>
-                 <h5 className="font-black text-dark uppercase tracking-widest text-[10px] md:text-sm">Project Director</h5>
-                 <p className="text-gray-500 font-bold text-[9px] md:text-xs uppercase tracking-widest">Hitech Construction / Termal Ltd</p>
-              </div>
-           </div>
+              <h5 className="font-black text-dark uppercase tracking-widest text-[10px] md:text-sm">Project Director</h5>
+              <p className="text-gray-500 font-bold text-[9px] md:text-xs uppercase tracking-widest">Hitech Construction / Termal Ltd</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -272,13 +272,13 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
             <div>
               <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4 md:mb-6">Support</h4>
-              <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter mb-6 md:mb-8">Got Questions? <br className="hidden md:block"/> We Have Answers.</h2>
+              <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter mb-6 md:mb-8">Got Questions? <br className="hidden md:block" /> We Have Answers.</h2>
               <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-10">
                 Transparent communicationn is at the core of our business. If you don't find what you're looking for, our consultants are ready to help.
               </p>
               <div className="bg-dark p-6 md:p-8 rounded-2xl md:rounded-3xl text-white inline-block w-full sm:w-auto">
-                 <p className="font-bold mb-2 text-sm md:text-base">Call for urgent inquiries:</p>
-                 <p className="text-xl md:text-2xl font-black text-primary">+234 912 222 2643</p>
+                <p className="font-bold mb-2 text-sm md:text-base">Call for urgent inquiries:</p>
+                <p className="text-xl md:text-2xl font-black text-primary">+234 912 222 2643</p>
               </div>
             </div>
             <div className="space-y-4 md:space-y-6">
@@ -314,10 +314,10 @@ const Home: React.FC = () => {
           <h2 className="text-3xl md:text-7xl font-black text-white mb-8 md:mb-10 tracking-tighter leading-tight md:leading-none">READY TO START YOUR <br className="hidden md:block" /> NEXT PROJECT?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
             <Link to="/contact" className="cta-button bg-primary text-dark rounded-md w-full md:w-auto hover:bg-dark hover:text-white">
-               REQUEST A CONSULTATION <ArrowRight className="ml-2" />
+              REQUEST A CONSULTATION <ArrowRight className="ml-2" />
             </Link>
             <Link to="/services" className="cta-button border-2 border-white text-white rounded-md w-full md:w-auto hover:bg-white hover:text-dark">
-               VIEW OUR CAPABILITIES
+              VIEW OUR CAPABILITIES
             </Link>
           </div>
         </div>
