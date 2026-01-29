@@ -22,35 +22,35 @@ const About: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-24">
             <div className="lg:w-1/2 w-full">
               <div className="bg-secondary p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] relative">
-                 <History className="text-primary mb-6 md:mb-8 w-12 h-12 md:w-16 md:h-16" />
-                 <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter mb-6 md:mb-8 leading-tight">Decades of Building Nigeria's Backbone.</h2>
-                 <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                    Registered under CAC number <strong>6940500</strong>, Plurimmo Limited emerged as a focused entity to consolidate decades of collective director experience in the marine and civil engineering sectors.
-                 </p>
-                 <div className="space-y-3 md:space-y-4">
-                    <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
-                       <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
-                       <span>Established Infrastructure Authority</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
-                       <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
-                       <span>$420M Project Capability</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
-                       <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
-                       <span>Strategic West African Logistics</span>
-                    </div>
-                 </div>
+                <History className="text-primary mb-6 md:mb-8 w-12 h-12 md:w-16 md:h-16" />
+                <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter mb-6 md:mb-8 leading-tight">Decades of Building Nigeria's Backbone.</h2>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
+                  Registered under CAC number <strong>6940500</strong>, Plurimmo Limited emerged as a focused entity to consolidate decades of collective director experience in the marine and civil engineering sectors.
+                </p>
+                <div className="space-y-3 md:space-y-4">
+                  <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
+                    <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
+                    <span>Established Infrastructure Authority</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
+                    <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
+                    <span>$420M Project Capability</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-dark font-black text-xs md:text-sm">
+                    <ChevronRight className="text-primary w-4 h-4 md:w-5 md:h-5" />
+                    <span>Strategic West African Logistics</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="lg:w-1/2 w-full">
-               <div className="relative">
-                  <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80" alt="Engineer" className="rounded-2xl md:rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full" />
-                  <div className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-10 bg-primary p-6 md:p-10 rounded-xl md:rounded-2xl shadow-xl">
-                     <Users2 className="text-white mb-3 md:mb-4 w-8 h-8 md:w-10 md:h-10" />
-                     <p className="text-white font-black text-base md:text-xl leading-none uppercase">DIRECTOR <br className="hidden md:block"/> LED VISION</p>
-                  </div>
-               </div>
+              <div className="relative">
+                <img src="/assets/DIRECTOR LED VISION Image.png" alt="Engineer" className="rounded-2xl md:rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full" />
+                <div className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-10 bg-primary p-6 md:p-10 rounded-xl md:rounded-2xl shadow-xl">
+                  <Users2 className="text-white mb-3 md:mb-4 w-8 h-8 md:w-10 md:h-10" />
+                  <p className="text-white font-black text-base md:text-xl leading-none uppercase">DIRECTOR <br className="hidden md:block" /> LED VISION</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,27 +107,27 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-24">
             <div className="lg:w-1/2 w-full text-center lg:text-left">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-6 md:mb-10 leading-tight">Compliance & <br className="hidden md:block"/> Verification.</h2>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-6 md:mb-10 leading-tight">Compliance & <br className="hidden md:block" /> Verification.</h2>
               <p className="text-gray-400 mb-8 md:mb-12 text-base md:text-lg">We maintain the highest levels of transparency and regulatory compliance. Our credentials are available for partner verification.</p>
               <div className="grid grid-cols-2 gap-6 md:gap-8 max-w-sm mx-auto lg:mx-0">
-                 <div className="border-l-2 border-primary pl-4 md:pl-6 py-2 text-left">
-                    <p className="text-2xl md:text-3xl font-black text-white">CAC</p>
-                    <p className="text-[9px] md:text-xs text-gray-400 font-bold uppercase tracking-widest">Registered Entitity</p>
-                 </div>
-                 <div className="border-l-2 border-primary pl-4 md:pl-6 py-2 text-left">
-                    <p className="text-2xl md:text-3xl font-black text-white">ISO</p>
-                    <p className="text-[9px] md:text-xs text-gray-400 font-bold uppercase tracking-widest">Quality Standards</p>
-                 </div>
+                <div className="border-l-2 border-primary pl-4 md:pl-6 py-2 text-left">
+                  <p className="text-2xl md:text-3xl font-black text-white">CAC</p>
+                  <p className="text-[9px] md:text-xs text-gray-400 font-bold uppercase tracking-widest">Registered Entitity</p>
+                </div>
+                <div className="border-l-2 border-primary pl-4 md:pl-6 py-2 text-left">
+                  <p className="text-2xl md:text-3xl font-black text-white">ISO</p>
+                  <p className="text-[9px] md:text-xs text-gray-400 font-bold uppercase tracking-widest">Quality Standards</p>
+                </div>
               </div>
             </div>
             <div className="lg:w-1/2 w-full">
-               <div className="bg-white/5 border border-white/10 rounded-[2rem] md:rounded-[3rem] p-3 md:p-4 group">
-                  <div className="border-2 border-dashed border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] py-20 md:py-32 text-center group-hover:border-primary transition-colors px-6">
-                     <Award className="mx-auto text-primary mb-6 w-16 h-16 md:w-20 md:h-20" />
-                     <p className="text-white font-black text-lg md:text-xl tracking-tighter uppercase">CERTIFICATE OF REGISTRATION</p>
-                     <p className="text-gray-500 uppercase tracking-widest text-[10px] md:text-xs font-bold mt-2">Plurimmo Limited - RC 6940500</p>
-                  </div>
-               </div>
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] md:rounded-[3rem] p-3 md:p-4 group">
+                <div className="border-2 border-dashed border-white/20 rounded-[1.5rem] md:rounded-[2.5rem] py-20 md:py-32 text-center group-hover:border-primary transition-colors px-6">
+                  <Award className="mx-auto text-primary mb-6 w-16 h-16 md:w-20 md:h-20" />
+                  <p className="text-white font-black text-lg md:text-xl tracking-tighter uppercase">CERTIFICATE OF REGISTRATION</p>
+                  <p className="text-gray-500 uppercase tracking-widest text-[10px] md:text-xs font-bold mt-2">Plurimmo Limited - RC 6940500</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
