@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # EXCLUDE WEBMAIL FROM REDIRECTS
+  # This allows the system-level /webmail redirect to work
+  RewriteCond %{REQUEST_URI} ^/webmail [NC]
+  RewriteRule .* - [L]
+
+  # Standard SPA Routing
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
