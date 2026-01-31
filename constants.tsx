@@ -92,12 +92,12 @@ export const TEAM: TeamMember[] = [
 export const PROJECTS: Project[] = [
   {
     title: 'Lagos-Calabar Coastal Road',
-    category: 'Haulage & Logistics (N46b)',
+    category: 'Environmental Services',
     image: '/assets/LagosCalabarCoastalRoad.jpeg',
   },
   {
     title: 'Joint Venture Expansion',
-    category: 'Infrastructure ($90m with 2iUK)',
+    category: 'Environmental Services',
     image: '/assets/Joint Venture Expansion.jpeg',
   },
   {
@@ -107,22 +107,22 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Modern Fleet Operations',
-    category: 'Equipment Rental',
+    category: 'Marine Scrapping Project',
     image: '/assets/Carousel1.jpeg',
   },
   {
     title: 'Infrastructure Development',
-    category: 'Civil Engineering',
+    category: 'Marine Scrapping Project',
     image: '/assets/Carousel2.jpeg',
   },
   {
     title: 'Heavy Duty Haulage',
-    category: 'Logistics',
+    category: 'Marine Scrapping Project',
     image: '/assets/Carousel3.jpeg',
   },
   {
     title: 'Strategic Site Management',
-    category: 'Project Management',
+    category: 'Marine Scrapping Project',
     image: '/assets/Carousel4.jpeg',
   },
 ];
