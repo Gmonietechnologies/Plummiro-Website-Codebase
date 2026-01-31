@@ -1,5 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/webmail",
+      "destination": "https://sbg106.truehost.cloud/webmail",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!webmail).*)",
