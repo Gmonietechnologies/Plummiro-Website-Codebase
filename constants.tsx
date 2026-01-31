@@ -105,4 +105,24 @@ export const PROJECTS: Project[] = [
     category: 'Environmental Services',
     image: '/assets/marine scrapping.jpeg',
   },
+  {
+    title: 'Modern Fleet Operations',
+    category: 'Equipment Rental',
+    image: '/assets/Carousel1.jpeg',
+  },
+  {
+    title: 'Infrastructure Development',
+    category: 'Civil Engineering',
+    image: '/assets/Carousel2.jpeg',
+  },
+  {
+    title: 'Heavy Duty Haulage',
+    category: 'Logistics',
+    image: '/assets/Carousel3.jpeg',
+  },
+  {
+    title: 'Strategic Site Management',
+    category: 'Project Management',
+    image: '/assets/Carousel4.jpeg',
+  },
 ];

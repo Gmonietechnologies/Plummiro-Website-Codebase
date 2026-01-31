@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   CheckCircle2,
@@ -17,6 +16,80 @@ import {
 import { PROJECTS } from '../constants';
 
 const Home: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [itemsToShow, setItemsToShow] = useState(3);
+
+  // Drag/Swipe Logic
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused || isDragging) return;
+
+    const interval = setInterval(() => {
+      nextProject();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [activeIndex, isPaused, itemsToShow, isDragging]);
+
+  const nextProject = () => {
+    setActiveIndex((prev) =>
+      prev >= PROJECTS.length - itemsToShow ? 0 : prev + 1
+    );
+  };
+
+  const prevProject = () => {
+    setActiveIndex((prev) =>
+      prev === 0 ? PROJECTS.length - itemsToShow : prev - 1
+    );
+  };
+
+  // Interaction Handlers
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    setIsPaused(true);
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    setStartX(clientX);
+  };
+
+  const handleDragEnd = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+
+    const clientX = 'changedTouches' in e ? e.changedTouches[0].clientX : (e as React.MouseEvent).clientX;
+    const diff = startX - clientX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextProject();
+      } else {
+        prevProject();
+      }
+    }
+
+    setIsDragging(false);
+    setIsPaused(false);
+  };
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section with Video Background */}
@@ -214,26 +287,58 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Our Projects */}
-      <section className="py-20 md:py-32 bg-secondary/30">
+      {/* Our Projects Section with Swipable Carousel */}
+      <section className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="text-center mb-12 md:mb-16">
             <h4 className="text-primary font-black uppercase tracking-[0.3em] text-xs md:text-sm mb-4">Portfolio</h4>
             <h2 className="text-3xl md:text-5xl font-black text-dark tracking-tighter">Our Landmark Projects.</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {PROJECTS.map((project, idx) => (
-              <div key={idx} className="group relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden aspect-[4/5] shadow-xl bg-dark">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 md:p-10">
-                  <p className="text-primary font-black uppercase text-[10px] tracking-widest mb-2">{project.category}</p>
-                  <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{project.title}</h3>
+
+          <div className="relative">
+            <div
+              ref={carouselRef}
+              className={`flex transition-transform duration-700 ease-in-out ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+              style={{ transform: `translateX(-${activeIndex * (100 / itemsToShow)}%)` }}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onMouseDown={handleDragStart}
+              onMouseUp={handleDragEnd}
+              onTouchStart={handleDragStart}
+              onTouchEnd={handleDragEnd}
+            >
+              {PROJECTS.map((project, idx) => (
+                <div
+                  key={idx}
+                  className="px-3 min-w-full sm:min-w-[50%] md:min-w-[33.333%]"
+                  style={{ flex: `0 0 ${100 / itemsToShow}%` }}
+                >
+                  <div className="group relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden aspect-[4/5] shadow-xl bg-dark">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent flex flex-col justify-end p-6 md:p-10">
+                      <p className="text-primary font-black uppercase text-[10px] tracking-widest mb-2">{project.category}</p>
+                      <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{project.title}</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center mt-12 space-x-2">
+            {Array.from({ length: Math.ceil(PROJECTS.length / itemsToShow) }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i * itemsToShow)}
+                className={`h-1.5 rounded-full transition-all duration-300 ${Math.floor(activeIndex / itemsToShow) === i ? 'w-8 bg-primary' : 'w-2 bg-gray-300 hover:bg-primary/50'
+                  }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
             ))}
           </div>
         </div>
